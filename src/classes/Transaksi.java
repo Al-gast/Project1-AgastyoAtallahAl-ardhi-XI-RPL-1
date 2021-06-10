@@ -18,13 +18,25 @@ public class Transaksi {
     private double uangBayar;
     private double pajak;
     private double totalBayar;
+    private double biayaService; 
     
     
-    public Transaksi(String no_transaksi, String nm_pemesan, String tanggal, String no_meja) {}
+    public Transaksi(String no_transaksi, String nm_pemesan, String tanggal, String no_meja) {
+        this.noTransaksi = no_transaksi;
+    this.namaPemesan = nm_pemesan;
+    this.tanggal = tanggal;
+    this.noMeja = no_meja;
     
-    public void tambahPemesanan(Pesanan pesanan) {}
+    pesanan = new ArrayList<>();
+    }
+    
+     public void tambahPemesanan(Pesanan pesanan) {
+        this.pesanan.add(pesanan);
+    }
      
-    public ArrayList<Pesanan> getSemuaPesanan(){ return null;}
+    public ArrayList<Pesanan> getSemuaPesanan(){ 
+        return pesanan;
+    }
     
     public double hitungTotalPesanan() {return 0;}
     
