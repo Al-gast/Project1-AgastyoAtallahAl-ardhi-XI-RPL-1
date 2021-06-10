@@ -19,9 +19,18 @@ import java.util.Scanner;
  * @author LENOVO
  */
 public class MainAplikasiKasir {
+    
+    public static double PAJAK_PPN = 0.10;
+    public static double BIAYA_SERVICE = 0.05;
+    
     public static void main(String[] args) {
          Scanner input = new Scanner(System.in);
-         MainAplikasiKasir app = new MainAplikasiKasir();
+         
+         String no_transaksi, nama_pemesan, tanggal, no_meja = "";
+        String transaksi_lagi = "", pesan_lagi ="", keterangan = "", makan_ditempat;
+        int jumlah_pesanan, no_menu;
+         
+        MainAplikasiKasir app = new MainAplikasiKasir();
          app.generateDaftarMenu();
     }
     
